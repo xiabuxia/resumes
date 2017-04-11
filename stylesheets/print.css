@@ -1,0 +1,233 @@
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+@keyframes book-front {
+  0% {
+    transform-origin: 50% 50%;
+    transform: rotateX(-4deg) rotateY(-32deg) rotateZ(0deg);
+  }
+  100% {
+    transform-origin: 50% 50%;
+    transform: rotateX(-4deg) rotateY(-385deg) rotateZ(0deg);
+  }
+}
+@keyframes cloud {
+  0% {
+    left: -10px;
+    top: 10px;
+  }
+  50% {
+    left: 1050px;
+    top: 50px;
+  }
+  100% {
+    left: -10px;
+    top: 20px;
+  }
+}
+@keyframes book-back {
+  0% {
+    transform-origin: 50% 50%;
+    transform: rotateX(-4deg) rotateY(-32deg) rotateZ(0deg) translateZ(-10px);
+  }
+  100% {
+    transform-origin: 50% 50%;
+    transform: rotateX(-4deg) rotateY(-385deg) rotateZ(0deg) translateZ(-10px);
+  }
+}
+/* line 62, ../sass/print.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 68, ../sass/print.scss */
+html {
+  width: 100%;
+  height: 100%;
+}
+/* line 70, ../sass/print.scss */
+html body {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 75, ../sass/print.scss */
+body {
+  background: #757571;
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 81, ../sass/print.scss */
+ul, li {
+  list-style: none;
+}
+
+/* line 84, ../sass/print.scss */
+li {
+  position: absolute;
+}
+
+/* line 87, ../sass/print.scss */
+.bg-img {
+  width: 250px;
+  height: 100px;
+  background: url("http://7xpvnv.com2.z0.glb.qiniucdn.com/10d3e21a-8f76-4994-a200-fff3462256e2?n=cloud1") center center no-repeat;
+  background-size: cover;
+  position: absolute;
+  animation: cloud 100s infinite;
+}
+
+/* line 94, ../sass/print.scss */
+.ct {
+  width: 388px;
+  height: 560px;
+  position: relative;
+  left: 630px;
+  top: 50px;
+  perspective: 1200px;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+}
+
+/* line 103, ../sass/print.scss */
+#book-front {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateY(-32deg) rotateZ(0deg) translateZ(-150px);
+  transform-origin: 0 50% -150px;
+  transition-property: transform-origin;
+  transition-duration: 1s;
+  transition: all 1s;
+}
+
+/* line 114, ../sass/print.scss */
+.front {
+  width: 388px;
+  height: 560px;
+  border-radius: 2px;
+  background: #fff;
+  border: 1px solid #c1c1c1;
+  border-left: 1px solid #fff;
+  transform: rotateY(0deg);
+}
+
+/* line 123, ../sass/print.scss */
+.book-cover {
+  width: 348px;
+  height: 500px;
+  margin-top: 20px;
+  margin-left: 20px;
+  background: url("../imgs/timg (2).jpg") center center no-repeat;
+  background-size: cover;
+  border-radius: 2px;
+  opacity: 0.8;
+}
+
+/* line 136, ../sass/print.scss */
+.page {
+  width: 388px;
+  height: 560px;
+  border-radius: 2px;
+  border: 1px solid #c3b3b3;
+  transform: rotateY(180deg) translateZ(10px);
+  background: #fff;
+}
+
+/* line 143, ../sass/print.scss */
+.right {
+  width: 10px;
+  height: 560px;
+  background: #eaeaea;
+  transform: rotateY(90deg) translateX(5px) translateZ(385px);
+}
+
+/* line 148, ../sass/print.scss */
+.left {
+  width: 10px;
+  height: 560px;
+  background: #ccc;
+  transform: rotateY(90deg) translateX(4px) translateZ(-4px);
+}
+
+/* line 153, ../sass/print.scss */
+.top {
+  width: 390px;
+  height: 10px;
+  background: #fff;
+  transform: rotateX(90deg) translateZ(4px) translateY(-5px);
+}
+
+/* line 160, ../sass/print.scss */
+.bottom {
+  width: 390px;
+  height: 10px;
+  background: #fff;
+  transform: rotateX(90deg) translateY(-5px) translateZ(-553px);
+}
+
+/* line 165, ../sass/print.scss */
+.bottom1 {
+  box-shadow: -26px -25px 97px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* line 168, ../sass/print.scss */
+#book figure {
+  position: absolute;
+}
+
+/* line 172, ../sass/print.scss */
+#book-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateY(-28deg) rotateZ(0deg) translateZ(-150px);
+  transform-origin: 0 50% -150px;
+  z-index: -1;
+  transition-property: transform-origin transform;
+  transition-duration: 1s;
+}
+
+/* line 184, ../sass/print.scss */
+.page2 {
+  transform: rotateY(0deg) translateZ(0px);
+}
+
+/* line 187, ../sass/print.scss */
+.left2 {
+  transform: rotateY(90deg) translateX(0px) translateZ(-4px);
+}
+
+/* line 190, ../sass/print.scss */
+.back {
+  width: 388px;
+  height: 560px;
+  border-radius: 2px;
+  background-image: url("../imgs/timg (4).jpg");
+  background-size: cover;
+  border: 1px solid #fff;
+  border-right: 1px solid #5a5252;
+  transform: translateZ(-9px);
+}
+
+/* line 202, ../sass/print.scss */
+.bottom2 {
+  box-shadow: 80px -51px 222px 50px rgba(0, 0, 0, 0.8);
+}
+
+/* line 206, ../sass/print.scss */
+.ct:hover #book-front {
+  transform: rotateX(0deg) rotateY(-170deg) rotateZ(0deg) translateZ(-150px);
+  transition: all 1s;
+}
+
+/* line 210, ../sass/print.scss */
+.ct:hover #book-back {
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateZ(-150px);
+  transition: all 1s;
+}

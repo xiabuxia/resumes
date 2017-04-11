@@ -1,0 +1,213 @@
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+
+
+@mixin size($width,$height){
+    width: $width;
+    height: $height;
+}
+ @mixin bgImg($url){
+     background: url($url) center center no-repeat;
+ }
+%position {
+    position: absolute;
+    right: 0px;
+    top: 0px; 
+    background: #fff;
+}
+%triangle {
+    width: 0;
+    height: 0;
+    border-top: 50px solid #000;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+}
+
+@keyframes book-front {
+    0% {
+    transform-origin: 50% 50%;
+    transform:rotateX( -4deg) rotateY(-32deg) rotateZ(0deg);
+    }
+    100% {
+    transform-origin: 50% 50%;
+    transform:rotateX( -4deg) rotateY(-385deg) rotateZ(0deg);
+    }
+}
+@keyframes cloud {
+    0% {
+        left: -10px;
+        top: 10px;
+    }
+    50% {
+        left: 1050px;
+        top: 50px;
+    }
+    100% {
+        left: -10px;
+        top: 20px;
+    }
+}
+@keyframes book-back {
+    0% {
+    transform-origin: 50% 50%;
+    transform:rotateX( -4deg) rotateY(-32deg) rotateZ(0deg) translateZ(-10px);
+    }
+    100% {
+    transform-origin: 50% 50%;
+    transform:rotateX( -4deg) rotateY(-385deg) rotateZ(0deg) translateZ(-10px);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    @include size(100%,100%);
+    body {
+        margin: 0;
+        padding: 0;
+    }
+}
+body {
+    background: #757571;
+    opacity: 0.8;
+    @include size(100%,100%)
+    
+}
+ul,li {
+    list-style: none;
+}
+li {
+    position: absolute;
+}
+.bg-img {
+    @include size(250px,100px);
+    @include bgImg('http://7xpvnv.com2.z0.glb.qiniucdn.com/10d3e21a-8f76-4994-a200-fff3462256e2?n=cloud1');
+    background-size: cover;
+    position: absolute;
+    animation: cloud 100s infinite;
+    }
+.ct {
+    @include size(388px,560px);
+      position: relative;
+      left: 630px;
+      top: 50px;
+      perspective: 1200px;
+      transform-style: preserve-3d;
+      transform: rotateY(0deg);
+}
+#book-front {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transform:rotateX( 0deg) rotateY(-32deg) rotateZ(0deg) translateZ(-150px);
+    transform-origin: 0 50% -150px;
+    transition-property: transform-origin;
+    transition-duration: 1s;
+    transition: all 1s;
+}
+ .front {
+    @include size(388px,560px);
+    border-radius: 2px;
+    background: #fff;
+    border: 1px solid #c1c1c1;
+    border-left:1px solid #fff;
+    transform: rotateY(0deg);
+    
+}
+.book-cover {
+    @include size(348px,500px);
+    margin:{
+        top: 20px;
+        left: 20px;
+    };
+   @include bgImg('../imgs/timg (2).jpg');
+   background-size: cover;
+   border-radius: 2px;
+   opacity: 0.8;
+}
+
+
+.page {
+    @include size(388px,560px);
+    border-radius: 2px;
+    border: 1px solid #c3b3b3;
+    transform: rotateY(180deg) translateZ(10px);
+    background: #fff;
+}
+ .right {
+    @include size(10px,560px);
+    background: #eaeaea;
+    transform: rotateY(90deg) translateX(5px) translateZ(385px);
+}
+ .left {
+    @include size(10px,560px);
+    background: #ccc;
+    transform: rotateY(90deg) translateX(4px) translateZ(-4px);
+}
+ .top{
+
+    @include size(390px,10px);
+
+    background: #fff;
+    transform: rotateX( 90deg) translateZ(4px) translateY(-5px);
+}
+ .bottom{
+   @include size(390px,10px);
+    background: #fff;
+    transform: rotateX( 90deg) translateY(-5px) translateZ(-553px);  
+}
+.bottom1 {
+     box-shadow: -26px -25px 97px 15px rgba(0,0,0,0.5)
+}
+#book figure {
+    position: absolute;
+}
+
+#book-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transform:rotateX( 0deg) rotateY(-28deg) rotateZ(0deg) translateZ(-150px);
+    transform-origin: 0 50% -150px;
+    z-index: -1;
+    transition-property: transform-origin transform;
+    transition-duration: 1s;
+
+}
+.page2 {
+    transform: rotateY(0deg) translateZ(0px);
+}
+.left2 {
+    transform: rotateY(90deg) translateX(0px) translateZ(-4px);
+}
+ .back {
+    @include size(388px,560px);
+    border-radius: 2px;
+    background:{
+        image:url('../imgs/timg (4).jpg');
+        size: cover;
+    };
+    border: 1px solid #fff;
+    border-right: 1px solid #5a5252;
+    transform: translateZ(-9px);
+    
+}
+.bottom2 {
+    box-shadow: 80px -51px 222px 50px rgba(0,0,0,0.8);
+}
+
+ .ct:hover #book-front {
+    transform:rotateX( 0deg) rotateY(-170deg) rotateZ(0deg) translateZ(-150px);
+    transition: all 1s;
+}
+.ct:hover #book-back {
+    transform:rotateX( 0deg) rotateY(0deg) rotateZ(0deg) translateZ(-150px);
+    transition: all 1s;
+}
