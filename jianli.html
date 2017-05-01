@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+        #resume {
+            max-width: 680px;
+            min-height: 960px;
+            box-shadow: 0 2px 40px 5px rgba(0,0,0,0.5);
+            margin: 10px auto;
+            display: flex;
+        }
+        .left-ct {
+            width: 195px;
+            height: 960px;
+            background: linear-gradient(to bottom right,#254665,#305679);
+            color: #fff;
+            font-size: 12px;
+        }
+        .right-ct {
+            min-width: 485px;
+            min-height: 960px;
+            color: #254665;
+            font-family: KaiTi_GB2312;
+            font-size: 14px;
+        }
+        .portrait-ct {
+            width: 100px;
+            height: 132px;
+            background: #fff;
+            margin-top: 25px;
+            margin-left: 28px;
+            border: 1px solid #ccc;
+            
+        }
+        .portrait {
+            width: 92px;
+            height: 124px;
+            margin-left: 4px;
+            margin-top: 4px;
+            background: url('imgs/myphoto.png') center no-repeat;
+            background-size: cover;
+        }
+        ul.information {
+            margin: 0;
+            padding: 0;
+            margin-top: 30px;
+            width: 200px;
+        }
+        .information li {
+            margin-top: 20px;
+            color: #ccc;
+        }
+        .title {
+            margin-top: 50px;
+            font-size: 20px;
+            color: #ccc;
+        }
+        .title span {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border: 1px solid #fff;
+            background: #fff;
+            transform: rotate(45deg);
+            margin-right: 10px;
+        }
+        .technical-ct {
+            margin-left: 10px;
+            padding: 0;
+        }
+        .technical-ct li {
+            display: block;
+            line-height: 30px;
+            color: #ccc;
+            margin-top: 20px;
+        }
+        .technical-1 {
+            border-bottom: 4px solid #ccc;
+        }
+        .technical-2 {
+            width: 83px;
+            border-bottom: 4px solid #ccc;
+        }
+        .technical-3 {
+            width: 83px;
+            border-bottom: 4px solid #ccc;
+        }
+        .technical-4 {
+            width: 63px;
+            border-bottom: 4px solid #ccc;
+        }
+        .technical-5 {
+            width: 33px;
+            border-bottom: 4px solid #ccc;
+        }
+        .technical-6 {
+            width: 40px;
+            border-bottom: 4px solid #ccc;
+        }
+        .technical-7 {
+            width: 15px;
+            border-bottom: 4px solid #ccc;
+        }
+        .hobby {
+            padding: 0;
+            width: 120px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            display: flex;
+            color: #ccc;
+        }
+        .hobby li {
+            margin-top: 20px;
+        }
+        .myname {
+            margin-top: 40px;
+            margin-left: 40px;
+            font-size: 25px;
+            font-weight: bold;
+            
+            
+            letter-spacing: 5px;
+        }
+        .myintention {
+            margin:10px 50px;
+        }
+        .logo {
+            width: 30px;
+            height: 30px;
+            margin-bottom: -10px;
+        }
+        .education {
+            margin-left: 30px;
+            margin-top: 30px;
+        }
+        .education span{
+            width: 385px;
+            display: inline-block;
+            margin-left: 5px;
+            font-size: 15px;
+            font-weight: bold;
+            line-height: 30px;
+            border-bottom: 2px solid #254665;
+        }
+        .right-ct p{
+            margin-left: 50px;
+            width: 408px;
+            line-height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="resume">
+        <div class="left-ct">
+            <div class="portrait-ct">
+                <div class="portrait"></div>
+                <ul class="information">
+                    <li>年龄：25</li>
+                    <li>地址: 广西玉林</li>
+                    <li>电话：15270561314</li>
+                    <li>邮箱: 814087909@qq.com</li>
+                    
+                </ul>
+                <div class="title"><span></span>技能</div>
+                <ul class="technical-ct">
+                    <li class="technical-1">HTML5+CSS3</li>
+                    <li class="technical-2">JavaScript</li>
+                    <li class="technical-3">jQuery</li>
+                    <li class="technical-4">Webpack+require.js</li>
+                    <li class="technical-5">Node</li>
+                    <li class="technical-6">Sass+gulp</li>
+                    <li class="technical-7">React</li>
+                </ul>
+                <div class="title"><span></span>爱好</div>
+                <ul class="hobby">
+                    <li>music</li>
+                    <li>movie</li>
+                    <li>baskeball</li>
+                    <li>electron</li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-ct">
+            <div class="myname">夏锦胜</div>
+            <div class="myintention">求职意向: 前端开发工程师</div>
+            <div class="education"><img class="logo" src="imgs/timg (5).png" alt=""><span>教育背景</span></div>
+            <p>专&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业：微电子学(本科)</p>
+            <p>毕业学校：九江学院</p>
+            <p>毕业时间：2016.7</p>
+            <div class="education"><img class="logo" src="imgs/timg (5).png" alt=""><span>个人情况</span></div>
+            <p>能够熟练使用HTML、CSS3、Ajax、JavaScript和jQuery，会使用Require.js、webpack、Sass、gulp</p>
+            
+        </div>
+    </div>
+</body>
+</html>

@@ -222,7 +222,7 @@ li {
 
 /* line 206, ../sass/print.scss */
 .ct:hover #book-front {
-  transform: rotateX(0deg) rotateY(-170deg) rotateZ(0deg) translateZ(-150px);
+  transform: rotateX(0deg) rotateY(-170deg) rotateZ(0deg) translateZ(-139px);
   transition: all 1s;
 }
 
