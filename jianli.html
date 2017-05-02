@@ -11,24 +11,25 @@
         }
         #resume {
             max-width: 680px;
-            min-height: 960px;
+            min-height: 1130px;
             box-shadow: 0 2px 40px 5px rgba(0,0,0,0.5);
             margin: 10px auto;
             display: flex;
+            
         }
         .left-ct {
             width: 195px;
-            height: 960px;
+            height: 1130px;
             background: linear-gradient(to bottom right,#254665,#305679);
             color: #fff;
             font-size: 12px;
         }
         .right-ct {
             min-width: 485px;
-            min-height: 960px;
+            min-height: 1130px;
             color: #254665;
             font-family: KaiTi_GB2312;
-            font-size: 14px;
+            font-size: 12px;
         }
         .portrait-ct {
             width: 100px;
@@ -38,13 +39,14 @@
             margin-left: 28px;
             border: 1px solid #ccc;
             
+            
         }
         .portrait {
             width: 92px;
             height: 124px;
             margin-left: 4px;
             margin-top: 4px;
-            background: url('imgs/myphoto.png') center no-repeat;
+            background: url('imgs/photo.jpg') center no-repeat;
             background-size: cover;
         }
         ul.information {
@@ -131,6 +133,15 @@
         .myintention {
             margin:10px 50px;
         }
+        .myintention span {
+            display: inline-block;
+   
+            border-right: 1px solid #254665;
+            padding-right: 10px;
+            margin-right: 10px;
+     
+
+        }
         .logo {
             width: 30px;
             height: 30px;
@@ -152,7 +163,19 @@
         .right-ct p{
             margin-left: 50px;
             width: 408px;
-            line-height: 30px;
+            line-height: 20px;
+            margin-top:-10px;
+        }
+        p.first {
+            margin-top: 10px;
+        }
+        .bullute {
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            border-radius: 50%;
+            background: #000;
+            margin-right: 10px;
         }
     </style>
 </head>
@@ -163,8 +186,11 @@
                 <div class="portrait"></div>
                 <ul class="information">
                     <li>年龄：25</li>
+                    <li>学历：本科</li>
                     <li>地址: 广西玉林</li>
+                    <li>微信: xjs131496</li>
                     <li>电话：15270561314</li>
+                    <li>qq: 814087909</li>
                     <li>邮箱: 814087909@qq.com</li>
                     
                 </ul>
@@ -189,13 +215,38 @@
         </div>
         <div class="right-ct">
             <div class="myname">夏锦胜</div>
-            <div class="myintention">求职意向: 前端开发工程师</div>
-            <div class="education"><img class="logo" src="imgs/timg (5).png" alt=""><span>教育背景</span></div>
-            <p>专&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业：微电子学(本科)</p>
-            <p>毕业学校：九江学院</p>
-            <p>毕业时间：2016.7</p>
-            <div class="education"><img class="logo" src="imgs/timg (5).png" alt=""><span>个人情况</span></div>
-            <p>能够熟练使用HTML、CSS3、Ajax、JavaScript和jQuery，会使用Require.js、webpack、Sass、gulp</p>
+            <div class="myintention"><span>一年以上前端经验</span>求职意向: 前端开发工程师。</div>
+            <div class="education"><img class="logo" src="imgs/timg (5).png" alt=""><span>掌握技能</span></div>
+            
+            <p class="first"><span class="bullute"></span>能熟练使用HTML+CSS熟练编写可视化页面，了解一定的HTML5和CSS3，能用js实现常见效果，了解Ajax以及Json，Xml等数据交换格式、原生js、事件类型、Dom操作、Jsonp、跨域、闭包、原生链、面向对象、封装。熟练使用jQuery</p>
+            <p><span class="bullute"></span>有Git , Bower , npm等包和代码管理工具是使用经验，能够使用server-mock模拟后端数据</p>
+            <p><span class="bullute"></span>有require.js、webpack、gulp代码打包压缩等处理工具使用经验</p>
+            <p><span class="bullute"></span>能使用Scss进行css编译，对React框架有一定的了解</p>
+            <p><span class="bullute"></span>使用编辑器：  vscode、sublime、vim</p>
+            <div class="education"><img class="logo" src="imgs/timg (5).png" alt=""><span>项目经验</span></div>
+            <p class="first"><span class="bullute"></span><strong>FM播放器</strong></p>
+            <p><strong>预览地址：</strong>https://xiabuxia.github.io/music-player/player.html</p>
+            <p><strong>源码地址：</strong>https://github.com/xiabuxia/music-player</p>
+            <p><strong>项目描述：</strong>该播放器使用了HTML5的Audio对象，用该对象的属性和方法实现歌曲的播放暂停等功能，整个项目是用原生js实现，使用ajax jsonp方式方式请求歌曲信息，得到歌曲id后再ajax请求歌词，播放器能够实现拖动，封装了原生ajax和实现拖动组件</p>
+            <p><strong>使用技术：</strong>用到了html、css、js，sass、requirejs，原生ajax的请求，后期使用gulp工具对js和css进行打包压缩</p>
+            
+            <p class="first"><span class="bullute"></span><strong>某机构主页</strong></p>
+            <p><strong>预览地址：</strong>https://xiabuxia.github.io/product-lijiang/</p>
+            <p><strong>源码地址：</strong>https://github.com/xiabuxia/product-lijiao</p>
+            <p><strong>项目描述：</strong>该主页用flex布局，使用jQuery进行编码，封装了轮播组件和tab切换组件，用webpack对项目进行打包和压缩以及用html、css以及图片相关的loader对其进行处理，使用jq的ajax请求得到当地天气信息，该天气API支持cros方式</p>
+            <p><strong>使用技术：</strong>html+css、npm、webpack、jQuery、Ajax</p>
+            
+            <p class="first"><span class="bullute"></span><strong>React todolist（初步使用）</strong></p>
+            <p><strong>预览地址：</strong>https://xiabuxia.github.io/project-react-1/build/index.html</p>
+            <p><strong>源码地址：</strong>https://github.com/xiabuxia/project-react-1/tree/master/build</p>
+            <p><strong>使用技术：</strong>react+webpack</p>
+            <p><strong></strong></p>
+
+            <div class="education"><img class="logo" src="imgs/timg (5).png" alt=""><span>个人评价</span></div>
+            <p class="first"><strong>1、</strong>做事踏实认真，能吃苦耐劳，有独立分析解决问题的能力。具备良好的学习、沟通和团队协作能力 , 对前端技术及用户体验追求极致，能承受较大的工作压力；</p>
+            <p><strong>2、</strong>喜欢互联网方面工作，热衷于前端技术，在前端开发方面有一定经验；</p>
+            <p><strong>3、</strong>敢于面对和克服困难，能够尽心竭力的为企业工作。</p>
+            
             
         </div>
     </div>
